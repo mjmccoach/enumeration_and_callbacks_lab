@@ -26,6 +26,9 @@ Cinema.prototype.filterByLength = function(movieLength){
   return this.films.every(({length}) => length > movieLength);
 };
 
+Cinema.prototype.totalLength = function(){
+  return this.films.reduce((acc, film) => acc + film.length,0);
+};
 
 
 
