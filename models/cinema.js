@@ -22,6 +22,11 @@ Cinema.prototype.filterByYear = function(movieYear){
   return this.films.filter(({year}) => year === movieYear);
 };
 
+Cinema.prototype.filterByLength = function(movieLength){
+  return this.films.every(({length}) => length > movieLength);
+};
+
+
 
 
 module.exports = Cinema;
